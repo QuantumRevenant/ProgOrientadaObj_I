@@ -56,6 +56,6 @@ float CalcularPerimetro(float param[])
 void ImprimirResultados(float area, float perimetro)
 {
     system("cls");
-    cout<<"Área del Rectángulo: "<<area<<" und."<<endl;
+    cout<<"Área del Rectángulo: "<<area<<" und. ^2"<<endl;
     cout<<"Perímetro del Rectángulo: "<<perimetro<<" und."<<endl;
 }

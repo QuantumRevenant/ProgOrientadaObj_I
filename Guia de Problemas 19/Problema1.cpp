@@ -13,50 +13,32 @@ Diseñar programa que determine el importe de compra, el importe de descuento y 
 */
 string SeleccionarProducto();
 int SeleccionarCantidad(string producto);
+float GetPrecioBase(string producto, int cantidad),
+    GetPrecioDescuento(float precioBase, int cantidad),
+    GetPrecioFinal(float precioBase, float precioDescontar);
+void Imprimir(string producto, int cantidad, float precioBase, float precioDescontar, float precioFinal);
 
 int main()
 {
-    string producto;
+    string producto,
+        opcion;
     unsigned int cantidad;
     float descuentoUsar,
         precioDescontar,
         precioBase,
         precioFinal;
-    const float precioP1 = 15.0f,
-                precioP2 = 17.5f,
-                precioP3 = 20.0f,
-                descuento1 = 0.07f,
-                descuento2 = 0.15f;
-
-    producto = SeleccionarProducto();
-    cantidad = SeleccionarCantidad(producto);
-
-    if (cantidad > 10)
-        descuentoUsar = descuento2;
-    else
-        descuentoUsar = descuento1;
-
-    if (producto == "P1")
-        precioBase = precioP1 * cantidad;
-    else if (producto == "P2")
-        precioBase = precioP2 * cantidad;
-    else
-        precioBase = precioP3 * cantidad;
-
-    precioDescontar = precioBase * descuentoUsar;
-
-    precioFinal = precioBase - precioDescontar;
-
-    system("cls");
-    cout << "RECIBO" << endl
-         << "Producto: S/" << producto << endl
-         << "Cantidad: S/" << cantidad << endl
-         << "Precio Base: S/" << precioBase << endl
-         << "Precio a descontar (" << descuentoUsar * 100 << "%): S/" << precioDescontar << endl
-         << endl
-         << "Precio Final: S/" << precioFinal << endl
-         << endl
-         << "Muchas Gracias por su compra ^-^";
+    do
+    {
+        producto = SeleccionarProducto();
+        cantidad = SeleccionarCantidad(producto);
+        precioBase = GetPrecioBase(producto, cantidad);
+        precioDescontar = GetPrecioDescuento(precioBase, cantidad);
+        precioFinal = GetPrecioFinal(precioBase, precioDescontar);
+        Imprimir(producto, cantidad, precioBase, precioDescontar, precioFinal);
+        cout << endl
+             << "PARA CONTINUAR (S/s)" << endl;
+        cin >> opcion;
+    } while (opcion == "S" || opcion == "s");
 
     return 0;
 }
@@ -66,7 +48,7 @@ string SeleccionarProducto()
     string input = "";
     do
     {
-        system("cls");
+        // system("cls");
         if (input != "")
             cout << "ERROR, VALOR INVÁLIDO" << endl
                  << endl;
@@ -81,7 +63,7 @@ int SeleccionarCantidad(string producto)
     int cantidad = 0;
     do
     {
-        system("cls");
+        // system("cls");
         if (cantidad != 0)
             cout << "ERROR, VALOR INVÁLIDO" << endl
                  << endl;
@@ -89,4 +71,52 @@ int SeleccionarCantidad(string producto)
         cin >> cantidad;
     } while (cantidad < 0);
     return cantidad;
+}
+
+float GetPrecioBase(string producto, int cantidad)
+{
+    float precioBase;
+    const float precioP1 = 15.0f,
+                precioP2 = 17.5f,
+                precioP3 = 20.0f;
+
+    if (producto == "P1")
+        precioBase = precioP1 * cantidad;
+    else if (producto == "P2")
+        precioBase = precioP2 * cantidad;
+    else
+        precioBase = precioP3 * cantidad;
+    return precioBase;
+}
+
+float GetPrecioDescuento(float precioBase, int cantidad)
+{
+    float precioDescontar;
+    const float descuento1 = 0.07f,
+                descuento2 = 0.15f;
+    if (cantidad > 10)
+        precioDescontar = precioBase * descuento2;
+    else
+        precioDescontar = precioBase * descuento1;
+    return precioDescontar;
+}
+
+float GetPrecioFinal(float precioBase, float precioDescontar)
+{
+    float precioFinal;
+    precioFinal = precioBase - precioDescontar;
+    return precioFinal;
+}
+void Imprimir(string producto, int cantidad, float precioBase, float precioDescontar, float precioFinal)
+{
+    // system("cls");
+    cout << "RECIBO" << endl
+         << "Producto: S/" << producto << endl
+         << "Cantidad: S/" << cantidad << endl
+         << "Precio Base: S/" << precioBase << endl
+         << "Precio a descontar: S/" << precioDescontar << endl
+         << endl
+         << "Precio Final: S/" << precioFinal << endl
+         << endl
+         << "Muchas Gracias por su compra ^-^";
 }

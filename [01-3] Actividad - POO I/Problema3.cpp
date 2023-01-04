@@ -7,8 +7,8 @@ using namespace std;
 Ingresar N elementos en un Arreglo 1-Dimensional,
 Mostrar los Divisores de todos los elementos ingresados
 */
-int divisores(int valor, int posicion);
-int CantidadElementos();
+int divisores(int valor, int posicion),
+    CantidadElementos();
 
 int main()
 {

@@ -43,10 +43,7 @@ int main()
     else
         precioBase = precioP3 * cantidad;
 
-    if (cantidad > 10)
-        precioDescontar = precioBase * descuento2;
-    else
-        precioDescontar = precioBase * descuento1;
+    precioDescontar = precioBase * descuentoUsar;
 
     precioFinal = precioBase - precioDescontar;
 

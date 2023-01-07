@@ -6,6 +6,12 @@ This repository is not very important, and I only use the Readme as a "Comment B
 
 En Clase
 
+* **Criterio para nombrar archivos:**
+  * AAwWWdD? -> Ejm: 23w01dSUa / 24w16dMd
+  * AA:		Año
+  * WW:	Numero de Semana
+  * D:		Día de la Semana
+  * ?:		Archivo del día (a, b, c, d, ...)
 * **EJERCICIOS DE CLASE**
 
 Guia de Problemas 19

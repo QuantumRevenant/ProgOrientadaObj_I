@@ -59,9 +59,9 @@ public:
 int main(int argc, char *argv[])
 {
     float precioBase;
-    float const recargo=0.35;
+    const float recargo=0.35;
     int cantidad;
-    int const chocolates=3;
+    const int chocolates=3;
 
     precioBase=GetPrecioUnitario();
     cantidad=GetCantidad();

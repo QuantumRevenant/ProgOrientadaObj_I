@@ -1,11 +1,19 @@
+## README?
+
+This repository is not very important, and I only use the Readme as a "Comment Box", you can review the files, but above all I use this repository to keep my files online and be able to consult them for future questions.
+
 ## INFORMACIÓN CARPETAS
+
+En Clase
+
+* **EJERCICIOS DE CLASE**
 
 Guia de Problemas 19
 
 * **USADO PARA PRACTICAR**
 * **REALIZADO EN CLASE**
 
-[01-3] Actividad - POO I	
+[01-3] Actividad - POO I
 
 * **USADO PARA PRACTICAR**
 

@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
     precioDocena=GetValue("el precio por docena");
     costoTransporte=GetValue("el costo de transporte");
-    cantidadDocena=GetValue("la cantidad de docenas:");
+    cantidadDocena=(int)GetValue("la cantidad de docenas:");
 
     Compra objCompra(precioDocena,costoTransporte,cantidadDocena,descuento);
 

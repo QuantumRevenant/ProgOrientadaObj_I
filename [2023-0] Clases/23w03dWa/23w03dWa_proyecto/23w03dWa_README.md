@@ -2,7 +2,6 @@
 
 TRABAJAMOS SOBRE EL ARCHIVO 23w03dMb.cpp
 
-
 Este archivo funciona como modelo de como trabajar el proyecto final
 
 ## Pasos
@@ -13,3 +12,14 @@ Este archivo funciona como modelo de como trabajar el proyecto final
 4. Introducir main.cpp al directorio "view" e introducirle .cpp de los metodos de las clases (name.cpp)
 5. Crear directorio "controller"
 6. Introducir todo esto en la carpeta de proyecto
+
+## Formato
+
+* `Carpeta/`
+  * `Carpeta_proyecto/`
+    * `controller/`
+    * `model/`
+      * `headers.h`
+      * `headers.cpp`
+    * `view/`
+      * `main.cpp`

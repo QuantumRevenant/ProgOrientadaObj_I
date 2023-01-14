@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     printData("La Calificación Menor es: "+to_string(objGrupo.getCalificacionMenor()));
 
     objGrupo.~Grupo();
-    delete calificaciones;
+    delete[] calificaciones;
 
 
     return 0;

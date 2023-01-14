@@ -18,7 +18,7 @@ Grupo::Grupo(float *notas, int cantidad)
 
 Grupo::~Grupo()
 {
-    delete Alumnos;
+    delete[] Alumnos;
 }
 
 float Grupo::getCalificacionMayor()

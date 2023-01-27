@@ -11,7 +11,7 @@ que se repite la pensión. Ejemplo: si el arreglo tiene los siguientes datos:
 
 */
 
-typedef struct Repeticion
+struct Repeticion
 {
     float pension;
     int cantidad = 0;

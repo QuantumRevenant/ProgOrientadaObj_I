@@ -86,6 +86,6 @@ void listar()
 {
 	for(int i=0;i<aluController.size();i++)	
 	{
-		cout<<aluController.get(i).getCodigo()<<"\t"<<aluController.get(i).getNombre()<<"\t\t\t"<<aluController.get(i).getNota()<<endl; 
+		cout<<aluController.get(i).getCodUsuario()<<"\t"<<aluController.get(i).getNombre()<<"\t\t\t"<<aluController.get(i).getNota()<<endl; 
 	}
 }

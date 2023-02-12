@@ -14,7 +14,7 @@ private:
 public:
     Docente(int, string, string, int, float);
     void setHorasTrabajadas(int);
-    int getCodigo();
+    int getCodUsuario();
     string getNombre();
     string getDni();
     float getSueldo();
@@ -32,7 +32,7 @@ void Docente::setHorasTrabajadas(int horasTrabajadas)
 {
     this->horasTrabajadas = horasTrabajadas;
 }
-int Docente::getCodigo()
+int Docente::getCodUsuario()
 {
     return this->codigo;
 }
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 // Implementar
 void listado(Docente x)
 {
-    cout << "Codigo:" << x.getCodigo() << endl;
+    cout << "Codigo:" << x.getCodUsuario() << endl;
     cout << "Nombre:" << x.getNombre() << endl;
     cout << "Dni:" << x.getDni() << endl;
     cout << "Sueldo:" << x.getSueldo() << endl;

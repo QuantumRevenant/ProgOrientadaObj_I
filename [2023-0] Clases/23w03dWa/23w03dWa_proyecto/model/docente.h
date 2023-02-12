@@ -22,7 +22,7 @@ private:
 public:
     Docente(int, string, string, int, float);
     void setHorasTrabajadas(int);
-    int getCodigo();
+    int getCodUsuario();
     string getNombre();
     string getDni();
     float getSueldo();

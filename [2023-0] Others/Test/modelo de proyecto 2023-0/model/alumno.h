@@ -9,6 +9,10 @@ private:
 	int		nota;
 public:
 	Alumno(int,string,int);
+	Alumno();
+	void 	setCodigo(int);
+	void 	setNombre(string);
+	void 	setNota(int);
 	int 	getCodUsuario();
 	string 	getNombre();
 	int		getNota();

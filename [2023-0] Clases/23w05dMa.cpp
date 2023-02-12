@@ -18,7 +18,7 @@ public:
     alumno();
     alumno(int, string);
     ~alumno();
-    int getCodigo();
+    int getCodUsuario();
     string getNombre();
 };
 
@@ -38,7 +38,7 @@ alumno::~alumno()
     
 }
 
-int alumno::getCodigo()
+int alumno::getCodUsuario()
 {
     return this->codigo;
 }
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 {
     alumno* objAlumn=new alumno(1,"daniel");
 
-    cout<<objAlumn->getCodigo()<<endl;
+    cout<<objAlumn->getCodUsuario()<<endl;
 
     delete objAlumn;
     return 0;

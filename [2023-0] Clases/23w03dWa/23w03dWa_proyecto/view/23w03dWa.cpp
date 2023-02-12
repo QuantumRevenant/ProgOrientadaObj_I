@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 // Implementar
 void listado(Docente x)
 {
-    cout << "Codigo:" << x.getCodigo() << endl;
+    cout << "Codigo:" << x.getCodUsuario() << endl;
     cout << "Nombre:" << x.getNombre() << endl;
     cout << "Dni:" << x.getDni() << endl;
     cout << "Sueldo:" << x.getSueldo() << endl;

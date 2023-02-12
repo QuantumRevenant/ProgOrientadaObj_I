@@ -16,7 +16,7 @@ void Docente::setHorasTrabajadas(int horasTrabajadas)
 {
     this->horasTrabajadas = horasTrabajadas;
 }
-int Docente::getCodigo()
+int Docente::getCodUsuario()
 {
     return this->codigo;
 }
